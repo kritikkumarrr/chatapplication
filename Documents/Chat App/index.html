@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribha Talkzzz...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto+Slab:wght@500&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Styles/index.css">
+</head>
+
+
+<body>
+    <main>
+        <header>
+            <div class="title">
+                
+                <h1>iChatapp</h1>
+            </div>
+            <button type="button" onclick="show_hide()">
+                <h5>Show Users</h5>
+            </button>
+        </header>
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4 class="users-count">3</h4>
+                </div>
+                <div class="users-list">
+                </div>
+    
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                </div>
+                <div class="user-input">
+                    <input id="user-msg" type="text" placeholder="Type your message...">
+                    <button type="button" id="user-send">SEND</button>
+                </div>
+    
+            </div>
+        </div>
+    </main>
+    <script>
+        var uwindow=document.querySelector('.users-window');
+        function show_hide(){
+            if(uwindow.style.display=="block"){
+                uwindow.style.display="none";
+            }
+            else{
+                uwindow.style.display="block";
+            }
+        }
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+
+</html>
